@@ -11,7 +11,7 @@ GET http://localhost:8078/events?organizerId=101
 ###
 
 ### GET request to localhost server - events
-GET http://localhost:8078/events/501
+GET http://localhost:8078/events/51
 
 ###
 
