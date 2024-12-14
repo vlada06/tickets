@@ -1,3 +1,5 @@
+### GET requests - various read requests for the `Implementing the EventController` video
+
 ### GET request to localhost server - organizers
 GET http://localhost:8078/organizers
 

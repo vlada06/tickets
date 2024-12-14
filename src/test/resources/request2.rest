@@ -1,0 +1,46 @@
+#### Various CRUD requests for the `Implementing the RegistrationController` video
+
+### POST request to localhost server - registrations
+### Create a registration
+POST http://localhost:8078/registrations
+Content-Type: application/json
+
+{
+  "productId" : 805,
+  "attendeeName" : "Joe Red"
+}
+
+###
+
+### Another attempt:
+POST http://localhost:8078/registrations
+Content-Type: application/json
+
+{
+  "productId" : 805,
+  "attendeeName" : "Joe Red"
+}
+###
+
+### GET request to localhost server - registrations
+### GET http://localhost:8078/registrations/8771d444-8045-4fdc-a729-cef043b83eec
+GET http://localhost:8078/registrations/cc88f093-e9ab-4189-809e-2ca77040de4f
+
+###
+
+### UPDATE request to localhost server - events
+PUT http://localhost:8078/registrations
+Content-Type: application/json
+
+{
+  "id": 1,
+  "productId": 805,
+  "ticketCode": "cc88f093-e9ab-4189-809e-2ca77040de4f",
+  "attendeeName": "Joe Brown"
+}
+###
+
+### DELETE request to localhost server - products
+DELETE http://localhost:8078/registrations/cc88f093-e9ab-4189-809e-2ca77040de4f
+
+###
