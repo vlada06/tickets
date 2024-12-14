@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+    <configuration default="false" name="request" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" path="localhost:8078/organizers">
+    <method v="2" />
+  </configuration>
+</component>

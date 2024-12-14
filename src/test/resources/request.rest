@@ -1,0 +1,19 @@
+### GET request to localhost server - organizers
+GET http://localhost:8078/organizers
+
+###
+
+### GET request to localhost server - events
+GET http://localhost:8078/events?organizerId=101
+
+###
+
+### GET request to localhost server - events
+GET http://localhost:8078/events/501
+
+###
+
+### GET request to localhost server - products
+GET http://localhost:8078/products?eventId=503
+
+###

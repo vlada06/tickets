@@ -1,0 +1,9 @@
+### GET request to localhost server - organizers
+GET http://localhost:8078/organizers
+
+###
+
+### GET request to localhost server - events
+GET http://localhost:8078/events
+
+###
