@@ -12,15 +12,15 @@ import java.util.NoSuchElementException;
 public class EventController {
 
     private final OrganizerRepository organizerRepository;
-//    private final EventRepository eventRepository;
-//    private final ProductRepository productRepository;
+    private final EventRepository eventRepository;
+    private final ProductRepository productRepository;
 
-    public EventController(OrganizerRepository organizerRepository) {
-//                           EventRepository eventRepository,
-//                           ProductRepository productRepository) {
+    public EventController(OrganizerRepository organizerRepository,
+                           EventRepository eventRepository,
+                           ProductRepository productRepository) {
         this.organizerRepository = organizerRepository;
-//        this.eventRepository = eventRepository;
-//        this.productRepository = productRepository;
+        this.eventRepository = eventRepository;
+        this.productRepository = productRepository;
     }
 
     @GetMapping(path = "/organizers")

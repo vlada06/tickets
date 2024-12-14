@@ -1,9 +1,12 @@
 package com.pluralsight.springboot.tickets.events;
 
+import org.springframework.stereotype.Repository;
+
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
+@Repository
 public class EventRepository {
 
     private final List<Event> events = List.of(

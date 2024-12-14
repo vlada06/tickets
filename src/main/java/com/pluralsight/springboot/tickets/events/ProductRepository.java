@@ -1,8 +1,11 @@
 package com.pluralsight.springboot.tickets.events;
 
+import org.springframework.stereotype.Repository;
+
 import java.math.BigDecimal;
 import java.util.List;
 
+@Repository
 public class ProductRepository {
     private final List<Product> products = List.of(
         new Product(801, 501, "Standard", "Standard Conference Ticket", new BigDecimal("499.00")),
