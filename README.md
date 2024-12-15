@@ -17,6 +17,9 @@
 
 
 - **"Handling Exceptions for Controllers"** 
+  - Two ways: 
+      1) handle controller exceptions inside the controller class, with a limited scope
+      1) Create separate class to handle exceptions for multiple controllers.
 
 
 ### Reference Documentation
