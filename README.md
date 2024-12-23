@@ -17,6 +17,27 @@
 
 
 - **"Handling Exceptions for Controllers"** 
+  - Two ways: 
+      1) handle controller exceptions inside the controller class, with a limited scope
+      1) Create separate class to handle exceptions for multiple controllers.
+
+
+### Section 4: Accessing Databases with Spring Data:
+
+- **"Storing Registration in MongoDB"**
+   - Need to start MongoDB container **before** launching the application
+     - to do that, navigate to where `docker-compose.yaml` is and run: `docker compose up`
+     - to get inside the container, run: `docker exec -it <container*> <shell**>`
+     - *)The container name or ID;   **) Command shell to be run inside the container
+     - i.e.: `docker exec -it ba8047 mongosh`
+     - or:  `docker exec -it tickets-mongo-1 mongosh`
+     - Once inside the Mongo container, to see all available `collections` (Mongo DB talk for `tables`) run: show collections
+     - To search the data of a collections, run: `db.<collection>.find()`, i.e. `db.registrations.find()`
+     - To leave the docker container, issue the command: `exit`
+     - To turn off the docker container (and destroy its content), run: `docker compose down`
+     - To persist data on a local file system, use *docker volume*. 
+       - TODO - learn how to use /manipulate `docker volumes`
+
 
 
 ### Section 4: Accessing Databases with Spring Data:
