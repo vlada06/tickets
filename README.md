@@ -36,6 +36,21 @@
        - TODO - learn how to use /manipulate `docker volumes`
 
 
+- **"Storing Registration in a relational data base"**
+   - In this case the RDBMS of choice is a free version  of MySQL - MariaDB 
+   - Same as for MongoDB, user needs to start the container **before** launching the application
+   - Two dependencies need to be added to the build file (be it pom.xml or build.gradle): 
+     - the DB driver artifact (in this case `mariadb-java-client` of group `org.mariadb.jdbc`)
+     - and (if not already present as a part of Spring Boot config) JPA
+   - JPA (used in conjunction with RDBMSs) cannot use Java's `record`, since it is immutable and does not provide 
+     no-args constructor. With JPA we have to use POJO classes, so we can have getters and setters, as well as no-args
+     constructor.
+  
+
+- **"Externalized Configuration and Initializing the Database**"
+  - Enter PostgreSQL container by running `docker exec -it tickets-postgres-1 psql -U pluralsight`
+  - To see the tables (inside the container) run `\dt`
+
 
 ### Reference Documentation
  * Further reference, and links can be found in [HELP.md](HELP.md) 
