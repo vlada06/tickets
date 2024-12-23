@@ -1,0 +1,35 @@
+### GET request to localhost server - organizers
+GET http://localhost:8078/organizersnew
+
+###
+
+### GET request to localhost server - events
+GET http://localhost:8078/registrations
+
+###
+### PUT request to localhost server - registrations
+PUT http://localhost:8078/registrations
+Content-Type: Application/json
+
+{
+  "id" : "675ec200ef71ca047250cdaf",
+  "ticketCode":"01882a11-a34f-4a6f-af46-7955eb845dd4",
+  "productId": 805,
+  "attendeeName": "Joe Brown"
+}
+
+
+###
+### POST request to localhost server - registrations
+POST http://localhost:8078/registrations
+Content-Type: Application/json
+
+{
+  "productId": 805,
+  "ticketCode": "cc88f093-e9ab-4189-809e-2ca77040de4f",
+  "attendeeName": "Eve Green"
+}
+
+
+###
+
