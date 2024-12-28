@@ -33,3 +33,8 @@ Content-Type: Application/json
 
 ###
 
+###
+### GET request to localhost server - registrations
+GET http://localhost:8078/eventsnew
+Content-Type: Application/json
+

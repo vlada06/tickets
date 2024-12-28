@@ -49,7 +49,7 @@
      - *)The container name or ID;   **) Command shell to be run inside the container
      - i.e.: `docker exec -it ba8047 mongosh`
      - or:  `docker exec -it tickets-mongo-1 mongosh`
-     - Once inside the Mongo container, to see all available `collections` (Mongo DB talk for `tables`) run: show collections
+     - Once inside the Mongo container, to see all available `collections` (Mongo DB talk for `tables`) run: `show collections`
      - To search the data of a collections, run: `db.<collection>.find()`, i.e. `db.registrations.find()`
      - To leave the docker container, issue the command: `exit`
      - To turn off the docker container (and destroy its content), run: `docker compose down`
@@ -71,6 +71,16 @@
 - **"Externalized Configuration and Initializing the Database**"
   - Enter PostgreSQL container by running `docker exec -it tickets-postgres-1 psql -U pluralsight`
   - To see the tables (inside the container) run `\dt`
+
+
+- **"Configuration using Spring Profiles"**
+  - Different profiles can have different directives
+  - Configuration files application.yml vs. application-testdata.yml have different instruction for `sql init mode`
+  - To run an application for a specific profile, use command `mvn spring-boot:run -Dspring-boot.run.profiles=<profil>`,
+    e.g. `./mvnw spring-boot:run -Dspring-boot.run.profiles=testdata`
+  - If the containers already exist, the above command will result in error, hence, prior to running the application
+    like described above, remove the existing docker containers by running `docker-compose down`
+
 
 
 ### Reference Documentation
